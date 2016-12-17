@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REDCOM by Fascha</title>
+
+<!--<link href="../static/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="../static/css/bootstrap.css" rel="stylesheet">
+<link href="../static/css/datepicker3.css" rel="stylesheet">
+<link href="../static/css/styles.css" rel="stylesheet">
+
+
+<link href="../static/css/chart.css" rel="stylesheet">
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
+<!--Icons-->
+<script src="../static/js/lumino.glyphs.js"></script>
+
+	<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>RED</span>COM</a>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+			<!--<li><a href="widgets.html"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Widgets</a></li>-->
+			<!--<li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>-->
+			<!--<li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tables</a></li>-->
+			<!--<li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>-->
+			<!--<li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>-->
+			<!--<li><a href="icons.html"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>-->
+			<li class="parent">
+				<a href="#">
+					<span data-toggle="collapse" href="#choose-sub"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Choose Subreddit
+				</a>
+				<ul class="children" id="choose-sub">
+					<li id="r/all">
+						<a class="" href="#">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/all
+						</a>
+					</li><li id="r/DIY">
+						<a class="" href="#">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/DIY
+						</a>
+					</li>
+					<li id="r/askReddit">
+						<a class="" href="#">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/askReddit
+						</a>
+					</li>
+					<li id="r/funny">
+						<a class="" href="#">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/funny
+						</a>
+					</li>
+					<li id="r/Showerthoughts">
+						<a class="" href="#">
+							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/Showerthoughts
+						</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li role="presentation" class="divider"></li>
+
+
+			<li class="parent">
+				<lh id="current-sub" class="dropdown-header">Subreddit auswahl</lh>
+				<ul id="sub-selection">
+					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 1</a></li>
+					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 2</a></li>
+					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 3</a></li>
+					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 4</a></li>
+					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 5</a></li>
+
+				</ul>
+			</li>
+
+		</ul>
+
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<!--<div class="row">-->
+			<!--<ol class="breadcrumb">-->
+				<!--<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>-->
+				<!--<li class="active">Universität Regensburg Bachelorarbeit Fabian Schatz</li>-->
+			<!--</ol>-->
+		<!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+
+		<!--SEARCHBAR-->
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="search-bar" class="input-group">
+					<input id="input-url" type="text" class="form-control" placeholder="Enter URL" />
+					<span class="input-group-btn">
+						<button class="btn btn-danger" id="btn-test">TEST</button>
+						<button class="btn btn-danger" id="btn-load">LOAD</button>
+					</span>
+				</div>
+			</div>
+		</div><!--/.row-->
+
+		<!--MAIN VISUALISATION-->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<div id="thread-information">
+						<div class="col-lg-4 col-md-12">
+							<div id="thread-warning" class="panel panel-info">
+								<!--PLACEHOLDER-->
+							</div>
+						</div>
+						<div class="col-lg-8 col-md-12">
+							<div  id="thread-title" class="panel panel-info">
+								<!--PLACEHOLDER-->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div id="vis-body">
+						<div class="col-lg-12">
+
+							<!--FIRST-LEVEL-VIS-->
+							<div id="first-level-vis">
+								<!--CARDS-->
+								<div class="row">
+									<div id="cards">
+										<div class="col-xs-6 col-md-3">
+											<div id="authors-card" class="panel panel-default">
+												<!--PLACEHOLDER-->
+											</div>
+										</div>
+										<div class="col-xs-6 col-md-3">
+											<div id="total-comments-card" class="panel panel-default">
+												<!--PLACEHOLDER-->
+											</div>
+										</div>
+										<div class="col-xs-6 col-md-3">
+											<div id="first-level-comments-card" class="panel panel-default">
+												<!--PLACEHOLDER-->
+											</div>
+										</div>
+										<div class="col-xs-6 col-md-3">
+											<div id="thread-lifetime-card" class="panel panel-default">
+												<!--PLACEHOLDER-->
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<!--TIMELINE-->
+								<div class="row">
+									<div id="timeline" class="col-lg-12 col-md-12 col-xs-12">
+										<div class="row">
+											<div style="float:left; width: 120px;">
+												<input name="mode" type="radio" value="ranking 1" id="ranking-1" checked>
+												<label for="ranking-1">  Ranking 1</label>
+											</div>
+											<div id="slider-labels">
+												<p id="start-date" class="pull-left slider-label"></p>
+												<p id="end-date" class="pull-right slider-label"></p>
+											</div>
+										</div>
+										<div class="row">
+											<div style="float:left; width: 120px;">
+												<input name="mode" type="radio" value="ranking 2" id="ranking-2">
+												<label for="ranking-2">  Ranking 2</label>
+											</div>
+											<div id="x-range-slider">
+
+											</div>
+										</div>
+										<div class="row">
+											<div id="timeline-visualisation"></div>
+										</div>
+									</div>
+								</div>
+
+								<!--MAIN VISUALISATION-->
+								<div class="row">
+									<div id="main-vis" class="col-lg-12 col-md-12 col-xs-12">
+										<div id="start-text">
+											<h2 style="text-align: center">Enter a URL and click "LOAD"</h2>
+											<h2 style="text-align: center">OR</h2>
+											<h2 style="text-align: center">Choose a <a href="https://www.reddit.com/wiki/faq#wiki_individual_subreddits"><strong>Subreddit</strong></a> and <strong>Thread</strong> in the <code>Sitebar</code></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--SECOND-LEVEL-VIS-->
+							<div id="second-level-vis">
+
+								<div class="row">
+									<div id="cards-and-controls" class="col-lg-12">
+										<div class="col-lg-4">
+											<button class="btn btn-lg btn-primary" id="btn-back">< BACK</button>
+										</div>
+										<div class="col-lg-8">
+											<p>The <strong style="color: green;">GREEN</strong>  circle indicates the clicked comment.</p>
+											<p>The <strong style="color: red;">RED</strong>  circle indicates the OP.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div id="details-1" class="col-lg-2 second-vis-details">
+										<!--PLACEHOLDER-->
+									</div>
+									<div id="tree" class="col-lg-8">
+										<!--PLACEHOLDER-->
+									</div>
+									<div id="details-2" class="col-lg-2">
+										<!--PLACEHOLDER-->
+									</div>
+
+								</div>
+
+								<div class="row">
+									<div id="body-1" class="col-lg-6">
+										<!--PLACEHOLDER-->
+									</div>
+									<div id="body-2" class="col-lg-6">
+										<!--PLACEHOLDER-->
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+
+
+	</div>	<!--/.main-->
+
+	<script src="../static/js/jquery-1.11.1.min.js"></script>
+
+	<!--<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>-->
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/chart.min.js"></script>
+	<!--<script src="../static/js/chart-data.js"></script>-->
+	<script src="../static/js/easypiechart.js"></script>
+	<script src="../static/js/easypiechart-data.js"></script>
+	<script src="../static/js/bootstrap-datepicker.js"></script>
+
+	<!--D3 v4-->
+	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+
+	<!--D3 v3-->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+	<script src="http://momentjs.com/downloads/moment.min.js"></script>
+
+
+
+
+	<!--MY SCRIPTS-->
+	<script src="../static/js/setup.js"></script>
+	<script src="../static/js/utility.js"></script>
+	<script src="../static/js/sitebar.js"></script>
+	<script src="../static/js/mainVis.js"></script>
+	<script src="../static/js/crawlconvo.js"></script>
+	<script src="../static/js/force_advanced.js"></script>
+	<script src="../static/js/secondLevelVis.js"></script>
+
+
+	<!--THIS NEEDS TO BE REVIEWED-->
+	<script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>

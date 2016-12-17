@@ -1,0 +1,88 @@
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+.grid path {
+    stroke-width: 0;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 8px 8px 4px 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+body > div.d3-tip.n {
+    max-width: 300px;
+}
+.d3-tip.n > p {
+    margin-top: 10px;
+    padding: 0px;
+
+    font-weight: lighter;
+    color: #fff;
+    line-height: 1em;
+}
+
+#clickForDetails {
+    font-size: .7em;
+}
+
+.y > g > line {
+    stroke-width: 0;
+}
+.y > path {
+    stroke-width: 0;
+}
+
+.second-vis-details > svg > g > text {
+    font-weight: lighter;
+    color: #245269;
+    font: 15px sans-serif;
+}
+
+.second-vis-details {
+    padding-top: 50px;
+    padding-left: 20px;
+    font: 18px sans-serif;
+}
+
+.second-vis-details p{
+    color: darkgreen;
+}
