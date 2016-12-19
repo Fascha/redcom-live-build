@@ -7,6 +7,8 @@
 var startDate,
     endDate;
 
+var scoreScale;
+
 var sliderInitialized = false;
 
 
@@ -63,12 +65,13 @@ function mainVis(data) {
     });
 
 
-    if (ldata.length < 300) {
-        threadWarning.empty();
-        threadWarning.append($("<div class='panel-body'><h4><strong style='color: red'>Thread my not have enough Comments!</strong></h4></div>"));
+    if (ldata.length < 200) {
+        updateThreadWarning("Thread my not have enough Comments!");
+        // threadWarning.empty();
+        // threadWarning.append($("<div class='panel-body'><h4><strong style='color: red'>Thread my not have enough Comments!</strong></h4></div>"));
     } else {
-        threadWarning.empty();
-        threadWarning.append($("<div class='panel-body'>" + "SOME DETAILS WHY I CHOOSE THIS THREAD HERE!" + "</div>"));
+        // threadWarning.empty();
+        // threadWarning.append($("<div class='panel-body'>" + "SOME DETAILS WHY I CHOOSE THIS THREAD HERE!" + "</div>"));
     }
 
 
@@ -81,7 +84,8 @@ function mainVis(data) {
 
 
     //clears the old visualisation and start text
-    d3.select("#start-text").remove();
+    // d3.select("#start-text").remove();
+    $("#start-text").hide();
     if (!sliderInitialized) {
         // d3.select("#vis-body").selectAll("svg").remove();
     } else {
@@ -154,9 +158,9 @@ function mainVis(data) {
     ////////////////////////////////
 
 
-    var scoreScale = d3.scale.linear()
+    scoreScale = d3.scale.linear()
         .domain([d3.min(ldata, function(d) { return d['score']}), d3.max(ldata, function(d) { return d['score']})])
-        .range([4, 10]);
+        .range([3.5, 12]);
 
     var opacityScale = d3.scale.linear()
         .domain([d3.min(ldata, function(d) { return d['replies']}), d3.max(ldata, function(d) { return d['replies']})])
@@ -194,7 +198,8 @@ function mainVis(data) {
 
     //////      X-AXIS     ////////
 
-    if (startDate == undefined && endDate == undefined) {
+    if (!sliderInitialized) {
+    // if (startDate == undefined && endDate == undefined) {
         startDate = d3.min(ldata, function(d) { return d['created_utc'] - 600; }) * 1000;
         endDate = d3.max(ldata, function(d) { return d['created_utc']  + 600; }) * 1000;
     }

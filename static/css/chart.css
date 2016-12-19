@@ -78,11 +78,27 @@ body > div.d3-tip.n {
 }
 
 .second-vis-details {
-    padding-top: 50px;
-    padding-left: 20px;
+    /*padding: 25px 25px 25px 25px;*/
+    padding-top: 25px;
+    padding-bottom: 25px;
     font: 18px sans-serif;
 }
 
-.second-vis-details p{
-    color: darkgreen;
+/*.second-vis-details p{*/
+    /*color: darkgreen;*/
+/*}*/
+
+#details-2,
+#details-1 {
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: lighter;
+}
+
+#details-1 p {
+    padding: 0px 25px 0px 25px;
+    color: green;
+}
+#details-2 p {
+    padding: 0px 25px 0px 25px;
+    color: yellow;
 }

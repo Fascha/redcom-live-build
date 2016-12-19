@@ -18,6 +18,9 @@ var details1Container = $("#details-1"),
     body1Container = $("#body-1"),
     body2Container = $("#body-2");
 
+var prevClicked,
+    prevColor;
+
 ////////////////////////
 
 
@@ -46,7 +49,16 @@ function setupGraph(){
         svg.selectAll("circle.node")
             .attr("cx", function (d) { return d.x; })
             .attr("cy", function (d) { return d.y; })
-            .on("click", updateDetails)
+            .on("click", function(d) {
+                if (prevClicked != undefined) {
+                    prevClicked.style("fill", prevColor);
+                }
+                prevClicked = d3.select(this);
+                prevColor = prevClicked.style("fill");
+
+                prevClicked.style("fill", "yellow");
+                updateDetails(d);
+            })
 
     });
 
@@ -81,11 +93,13 @@ function updateNetwork() {
         .attr("class", "node")
         // .call(force.drag)
         .attr("r", function (d) {
-            if (d.score >= 10) {
-               return 8;
-           } else {
-               return 4;
-           }
+            if (d.name === OP.name) {
+                return 25;
+            } else if (d['id'].split("_")[1] == clickedCommentID) {
+                return 25;
+            } else {
+                return scoreScale(d['score']);
+            }
         })
         .style("opacity", 1);
         // .call(force.drag);
@@ -104,7 +118,8 @@ function updateDetails(d) {
 
 function colorNodes(){
     for (name in nodecolor) {
-        nodecolor[name] = d3.rgb(255*Math.random(), 255*Math.random(), 255*Math.random());
+        // nodecolor[name] = "hsl(" + Math.random() * 360 + ",100%, 50%)";
+        nodecolor[name] = "hsl(" + Math.random() * 360 + ", " + (33 + (Math.random() * 67)) + "%, " + (0 + (Math.random() * 100)) + "%)";
     }
 
     // OP = RED
@@ -114,8 +129,10 @@ function colorNodes(){
             // console.log(d);
             if (d.name === OP.name) {
                 return "red";
+                // return "hsl(360 ,100%, 50%)";
             } else if (d['id'].split("_")[1] == clickedCommentID) {
                 return "green";
+                // return "hsl(120 ,100%, 50%)";
             } else if (names[d.name] === 1) {
                 return "black";
             } else {

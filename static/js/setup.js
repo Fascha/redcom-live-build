@@ -10,19 +10,21 @@ $(document).ready(function() {
     $("#second-level-vis").hide();
 
 
+    $("#btn-reset").on("click", resetEverything);
+
     $("#btn-back").on("click", function() {
         $("#first-level-vis").show();
         $("#second-level-vis").hide();
     });
 
     $("#btn-load").on("click", function() {
-        console.log($("#input-url").val());
+
 
         var req = "/get_thread/" + $("#input-url").val().split("/")[6];
-        console.log(req);
 
         sliderInitialized = false;
 
+        $("#cards").show();
         $("#timeline").show();
         appendLoadingBars();
 
@@ -36,6 +38,8 @@ $(document).ready(function() {
 
     $("#btn-test").on("click", function() {
         sliderInitialized = false;
+
+        updateThreadWarning("Comment/Author-Ratio about 2 <br>Below 15% First Level Comments<br>Thread Lifetime around 1 Day");
 
         $("#timeline").show();
         appendLoadingBars();

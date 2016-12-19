@@ -65,3 +65,32 @@ function appendLoadingBars() {
     $("#thread-lifetime-card").empty();
     $("#thread-lifetime-card").append(loading_gif_3);
 }
+
+function resetEverything() {
+
+    sliderInitialized = false;
+
+    d3.select("body").selectAll("svg").remove();
+
+    $("#timeline").hide();
+    $("#cards").hide();
+
+    $("#timeline-visualisation").empty();
+    // $("#main-vis").empty();
+    $("#thread-title").empty();
+    $("#thread-warning").empty();
+    $("#details-1").empty();
+    $("#details-2").empty();
+    $("#tree").empty();
+    $("#body-1").empty();
+    $("#body-2").empty();
+
+
+    $("#start-text").show();
+
+}
+
+function updateThreadWarning(text) {
+    $("#thread-warning").empty();
+    $("#thread-warning").append($("<div class='panel-body'><h4><strong style='color: red'>" + text + "</strong></h4></div>"));
+}
