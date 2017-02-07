@@ -35,106 +35,136 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span>RED</span>COM</a>
+				<a class="navbar-brand" href="javascript:history.go(0)"><span>RED</span>COM</a>
+				<a class="navbar-brand pull-right" target="_blank" href="http://reddit.com"><span class="glyphicon glyphicon-circle-arrow-right"></span> Go To <span>REDDIT</span></a>
 			</div>
-							
 		</div><!-- /.container-fluid -->
 	</nav>
-		
+
+
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-			<!--<li><a href="widgets.html"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Widgets</a></li>-->
-			<!--<li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Charts</a></li>-->
-			<!--<li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tables</a></li>-->
-			<!--<li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>-->
-			<!--<li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>-->
-			<!--<li><a href="icons.html"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>-->
 			<li class="parent">
-				<a href="#">
-					<span data-toggle="collapse" href="#choose-sub"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Choose Subreddit
-				</a>
-				<ul class="children" id="choose-sub">
-					<li id="r/all">
+				<lh id="favorites" class="dropdown-header">Selected Threads</lh>
+				<ul id="example-threads">
+					<!--<li role="presentation" class="divider"></li>-->
+					<li id="thread-1" class="">
 						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/all
-						</a>
-					</li><li id="r/DIY">
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/DIY
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Example #1
 						</a>
 					</li>
-					<li id="r/askReddit">
+					<li role="presentation" class="divider"></li>
+					<li id="thread-2" class="">
 						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/askReddit
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Example #2
 						</a>
 					</li>
-					<li id="r/funny">
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/funny
+					<li role="presentation" class="divider"></li>
+					<li id="thread-3" class="">
+						<a href="#">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Example #3
 						</a>
 					</li>
-					<li id="r/Showerthoughts">
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> r/Showerthoughts
+					<li role="presentation" class="divider"></li>
+					<li id="thread-4" class="">
+						<a href="#">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Example #4
+						</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li id="thread-5" class="">
+						<a href="#">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Example #5
+						</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li id="thread-6" class="">
+						<a href="#">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Example Thread <br>für Aufgabe (7)
 						</a>
 					</li>
 				</ul>
 			</li>
-
-
-			<li role="presentation" class="divider"></li>
-
-
-			<li class="parent">
-				<lh id="current-sub" class="dropdown-header">Subreddit auswahl</lh>
-				<ul id="sub-selection">
-					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 1</a></li>
-					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 2</a></li>
-					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 3</a></li>
-					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 4</a></li>
-					<li class=""><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#strokedal"></use></svg> Thread 5</a></li>
-
-				</ul>
-			</li>
-
 		</ul>
-
 	</div><!--/.sidebar-->
-		
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-		<!--<div class="row">-->
-			<!--<ol class="breadcrumb">-->
-				<!--<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>-->
-				<!--<li class="active">Universität Regensburg Bachelorarbeit Fabian Schatz</li>-->
-			<!--</ol>-->
-		<!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
 
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<!--SEARCHBAR-->
 		<div class="row">
 			<div class="col-lg-12">
 				<div id="search-bar" class="input-group">
 					<input id="input-url" type="text" class="form-control" placeholder="Enter URL" />
 					<span class="input-group-btn">
-						<button class="btn btn-danger" id="btn-reset">RESET</button>
-						<button class="btn btn-danger" id="btn-test">TEST</button>
-						<button class="btn btn-danger" id="btn-load">LOAD</button>
-					</span>
+							<button class="btn btn-danger" id="btn-load" style="box-shadow: 0px 0px 50px #30a5ff;">LOAD</button>
+						</span>
 				</div>
 			</div>
 		</div><!--/.row-->
 
-		<!--MAIN VISUALISATION-->
-		<div class="row">
-			<div class="col-lg-12">
+		<div id="start-text">
+			<div class="row panel">
+				<div class="col-lg-4">
+					<h3 class="modal-header">What is this about?</h3>
+					<p>This Tool is about analyzing and exploring communication on Reddit. There are two different layers of exploring the data. First you can get an overview with ranked comments and second you can go deeper into the discussion tree by clicking on one of the comments. This second layer represents the tree structure of Threads and gives an overview of the selected comment!</p>
+				</div>
+				<div class="col-lg-4">
+					<h3 class="modal-header">What is Reddit?</h3>
+					<p>Reddit is a social news aggregation, web content rating, and discussion website. Reddit's registered community members can submit content, such as text posts or direct links. Registered users can then vote submissions up or down to organize the posts and determine their position on the site's pages. The submissions with the most positive votes appear on the front page or the top of a category. Content entries are organized by areas of interest called "subreddits".</p>
+				</div>
+				<div class="col-lg-4">
+					<h3 class="modal-header">Important Information</h3>
+					<p>There are still bugs on this page.</p>
+					<p>Some features do not work sometimes.</p>
+					<p>Sometimes it may take a long time to load a Thread.</p>
+					<p>Loading a Thread sometimes fails!</p>
+					<p>Use this tool as an internal exploration and playground.</p>
+					<p><strong>HAVE FUN!</strong></p>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<h2 class="modal-header col-lg-6">HOW TO USE THIS TOOL</h2>
+				<span class="col-lg-4">
+					<button class="btn btn-danger btn-xlarge" id="btn-start-exploring" style="box-shadow: 0px 0px 50px #30a5ff;">START EXPLORING</button>
+				</span>
+
+				<div class="col-lg-6 panel">
+					<h4 class="panel-heading">FIRSTLEVEL</h4>
+					<img src="../static/img/firstLevelTutorial.PNG">
+					<p>Each line belongs to one author.</p>
+					<p>Each circle in a line belongs to the author.</p>
+					<p>Bigger comments have better score.</p>
+					<p>Less transparent comments have less replies.</p>
+					<p>Time increases from left to right.</p>
+				</div>
+				<div class="col-lg-6 panel">
+					<h4 class="panel-heading">TREE</h4>
+					<img src="../static/img/secondLevelTutorial.PNG">
+					<p>Each circle represents one comment.</p>
+					<p>Each line represents a link between two comments.</p>
+					<p>Comments with the same color are from the same author.</p>
+					<p>The bigger a circle the better his score.</p>
+					<p>The big green circle is the previously selected comment.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="main-content" style="display: none">
+
+			<div id="load-instructions" class="panel panel-body">
+				<h2 style="text-align: center">Enter a URL and click "LOAD"</h2>
+				<h2 style="text-align: center">OR</h2>
+				<h2 style="text-align: center">Choose a <strong style="color: #30a5ff;">Thread</strong> in the Sitebar</h2>
+			</div>
+
+			<div id="information-center" style="display: none">
 				<div class="row">
-					<div id="thread-information">
-						<div class="col-lg-4 col-md-12">
-							<div id="thread-warning" class="panel panel-info">
-								<!--PLACEHOLDER-->
-							</div>
-						</div>
-						<div class="col-lg-8 col-md-12">
+					<div class="col-lg-12">
+						<!--<div class="col-lg-4">-->
+							<!--<div id="thread-warning" class="panel panel-info">-->
+								<!--&lt;!&ndash;PLACEHOLDER&ndash;&gt;-->
+							<!--</div>-->
+						<!--</div>-->
+						<div class="col-lg-12">
 							<div  id="thread-title" class="panel panel-info">
 								<!--PLACEHOLDER-->
 							</div>
@@ -143,140 +173,131 @@
 				</div>
 
 				<div class="row">
-					<div id="vis-body">
-						<div class="col-lg-12">
-
-							<!--FIRST-LEVEL-VIS-->
-							<div id="first-level-vis">
-								<!--CARDS-->
-								<div class="row">
-									<div id="cards">
-										<div class="col-xs-6 col-md-3">
-											<div id="authors-card" class="panel panel-default">
-												<!--PLACEHOLDER-->
-											</div>
-										</div>
-										<div class="col-xs-6 col-md-3">
-											<div id="total-comments-card" class="panel panel-default">
-												<!--PLACEHOLDER-->
-											</div>
-										</div>
-										<div class="col-xs-6 col-md-3">
-											<div id="first-level-comments-card" class="panel panel-default">
-												<!--PLACEHOLDER-->
-											</div>
-										</div>
-										<div class="col-xs-6 col-md-3">
-											<div id="thread-lifetime-card" class="panel panel-default">
-												<!--PLACEHOLDER-->
-											</div>
-										</div>
-									</div>
-								</div>
-
-
-
-								<!--TIMELINE-->
-								<div class="row">
-									<div id="timeline" class="col-lg-12 col-md-12 col-xs-12">
-										<div class="row">
-											<div style="float:left; width: 120px;">
-												<input name="mode" type="radio" value="ranking 1" id="ranking-1" checked>
-												<label for="ranking-1">  Ranking 1</label>
-											</div>
-											<div id="slider-labels">
-												<p id="start-date" class="pull-left slider-label"></p>
-												<p id="end-date" class="pull-right slider-label"></p>
-											</div>
-										</div>
-										<div class="row">
-											<div style="float:left; width: 120px;">
-												<input name="mode" type="radio" value="ranking 2" id="ranking-2">
-												<label for="ranking-2">  Ranking 2</label>
-											</div>
-											<div id="x-range-slider">
-
-											</div>
-										</div>
-										<div class="row">
-											<div id="timeline-visualisation"></div>
-										</div>
-									</div>
-								</div>
-
-								<!--MAIN VISUALISATION-->
-								<div class="row">
-									<div id="main-vis" class="col-lg-12 col-md-12 col-xs-12">
-										<div id="start-text">
-											<h2 style="text-align: center">Enter a URL and click "LOAD"</h2>
-											<h2 style="text-align: center">OR</h2>
-											<h2 style="text-align: center">Choose a <a href="https://www.reddit.com/wiki/faq#wiki_individual_subreddits"><strong>Subreddit</strong></a> and <strong>Thread</strong> in the <code>Sitebar</code></h2>
-										</div>
-									</div>
+					<div class="col-lg-12">
+						<div id="cards">
+							<div class="col-lg-3">
+								<div id="authors-card" class="panel panel-default">
+									<!--PLACEHOLDER-->
 								</div>
 							</div>
-
-
-							<!--SECOND-LEVEL-VIS-->
-							<div id="second-level-vis">
-
-								<div class="row">
-									<div id="cards-and-controls" class="col-lg-12">
-										<div class="col-lg-4">
-											<button class="btn btn-lg btn-primary" id="btn-back">< BACK</button>
-										</div>
-										<div class="col-lg-8">
-											<p>The <strong style="color: green;">GREEN</strong>  circle indicates the clicked comment.</p>
-											<p>The <strong style="color: red;">RED</strong>  circle indicates the OP.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div id="details-1" class="col-lg-2 second-vis-details">
-										<!--PLACEHOLDER-->
-									</div>
-									<div id="tree" class="col-lg-8">
-										<!--PLACEHOLDER-->
-									</div>
-									<div id="details-2" class="col-lg-2 second-vis-details">
-										<p>Author: </p>
-										<p>Score: </p>
-									</div>
-
-								</div>
-
-								<div class="row">
-									<div id="body-1" class="col-lg-6">
-										<!--PLACEHOLDER-->
-									</div>
-									<div id="body-2" class="col-lg-6">
-										<!--PLACEHOLDER-->
-									</div>
+							<div class="col-lg-3">
+								<div id="total-comments-card" class="panel panel-default">
+									<!--PLACEHOLDER-->
 								</div>
 							</div>
-
+							<div class="col-lg-3">
+								<div id="first-level-comments-card" class="panel panel-default">
+									<!--PLACEHOLDER-->
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div id="thread-lifetime-card" class="panel panel-default">
+									<!--PLACEHOLDER-->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
 
+			<div id="first-level" style="display: none;">
+				<div id="first-level-vis" class="row panel">
+					<div class="col-lg-10">
+						<div id="main-vis">
+						</div>
+						<div id="slider-complete" class="row" style="display: none;">
+							<div class="row" id="slider-labels">
+								<p id="start-date" class="pull-left slider-label">Drag here to change <strong style="color: #30a5ff;">STARTDATE</strong></p>
+								<p id="end-date" class="pull-right slider-label">Drag here to change <strong style="color: #30a5ff;">ENDDATE</strong></p>
+							</div>
+							<div id="x-range-slider"></div>
+							<div id="timeline-visualisation"></div>
+						</div>
+					</div>
+					<div id="main-vis-legend" class="col-lg-2" style="margin-top: 30px; margin-bottom: 30px; display: none;">
+						<div id="main-vis-legend-header" class="panel-orange text-center">
+							LEGEND
+						</div>
+						<div style="background: #f2f2f2; padding: 10px;">
+							<span><span class="glyphicon glyphicon-green-fine-green-dot"></span></span> Most Replies</span>
+							</br>
+							<span><span class="glyphicon glyphicon-one-fine-blue-dot"></span></span> Best Score</span>
+							</br>
+							</br>
+							<img src="../static/img/radiusScale5_2.PNG" width="50%" height="50%"> Score
+							</br>
+							<img src="../static/img/opacityScale5_1.PNG" width="50%" height="50%"> Replies
+							</br>
+							</br>
+							<div id="download-graphics" class="panel-body" style="background: #a0a3a5; border-radius: 15px;">
+								<a href="#" style="color: #fff">
+									<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Click to <strong style="color: navy">Download Visualisation</strong>
+								</a>
+							</div>
+							</br>
+							<div id="download-raw-data" class="panel-body" style="background: #a0a3a5; border-radius: 15px;">
 
-	</div>	<!--/.main-->
+							</div>
+							</br>
+							<div id="change-ranking" class="row">
+								<span class="col-lg-12 text-center panel-title" style="background: #a0a3a5; color: #fff;">Change Ranking</span>
+								<form>
+									<input name="mode" type="radio" value="ranking 1" id="ranking-1" checked/>
+									<label for="ranking-1">  Reply heavy</label>
+									<br>
+									<input name="mode" type="radio" value="ranking 2" id="ranking-2">
+									<label for="ranking-2">  Score heavy</label>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<script src="../static/js/jquery-1.11.1.min.js"></script>
+			<div id="second-level" style="display: none;">
+				<div class="row panel">
+					<div class="row">
+						<div>
+							<button class="btn btn-sm btn-default" id="btn-back" style="margin: 10px;">BACK TO OVERVIEW</button>
+							<button class="btn btn-sm btn-default" id="btn-disable-zoom" style="margin: 10px;">Disable Zoom and Pan</button>
+							<!--<button class="btn btn-sm btn-primary" id="btn-basdack" style="margin: 10px;">More Info</button>-->
+						</div>
+					</div>
+					<div class="row">
+						<div id="tree" class="col-lg-7" style="padding-top: 20px; padding-bottom: 20px;">
+
+						</div>
+						<div id="second-vis-legend" class="col-lg-5" style="margin-top: 30px; margin-bottom: 30px;">
+							<div  style="background: #f1f4f7">
+								<div id="details-1" style="background: #f1f4f7"></div>
+								<div id="body-1" class="shortenbody" style="background: #f1f4f7; padding-left: 10px;"></div>
+							</div>
+							<div class="second-level-details" style="background: #f1f4f7">
+								<div id="details-2" style="background: #f1f4f7"></div>
+								<div id="body-2" style="background: #f1f4f7; padding-left: 10px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row panel panel-blue" style="padding-left: 40px;">
+						<h4>Big <strong style="color: red">RED CIRCLES</strong> represent the original poster</h4>
+						<h4>Big <strong style="color: green">GREEN CIRCLE</strong> represent the above clicked comment</h4>
+						<h4>Big <strong style="color: yellow">YELLOW CIRCLE</strong> represent the parent of the clicked comment</h4>
+						<h4>Select a circle to show details</h4>
+						<h4>Scroll inside the box to zoom</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 
 	<!--<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>-->
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-	<script src="../static/js/bootstrap.min.js"></script>
-	<script src="../static/js/chart.min.js"></script>
 	<!--<script src="../static/js/chart-data.js"></script>-->
-	<script src="../static/js/easypiechart.js"></script>
-	<script src="../static/js/easypiechart-data.js"></script>
-	<script src="../static/js/bootstrap-datepicker.js"></script>
+
+	<!--<script src="../static/js/easypiechart.js"></script>-->
+	<!--<script src="../static/js/easypiechart-data.js"></script>-->
+	<!--<script src="../static/js/bootstrap-datepicker.js"></script>-->
 
 	<!--D3 v4-->
 	<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
@@ -285,13 +306,19 @@
 	<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
 	<script src="../static/js/d3.v3.min.js"></script>
 
+	<script type="text/javascript" src="http://rawgit.com/krunkosaurus/simg/v1.1.2/src/simg.js"></script>
+
+	<!--<script src="http://momentjs.com/downloads/moment.min.js"></script>-->
+
+	<script src="../static/js/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
+	<script src="http://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 
-	<script src="http://momentjs.com/downloads/moment.min.js"></script>
-
-
-
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/chart.min.js"></script>
 
 	<!--MY SCRIPTS-->
 	<script src="../static/js/setup.js"></script>
@@ -303,25 +330,6 @@
 	<script src="../static/js/secondLevelVis.js"></script>
 
 
-	<!--THIS NEEDS TO BE REVIEWED-->
-	<script>
-		$('#calendar').datepicker({
-		});
-
-		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
-		    }); 
-		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-		}(window.jQuery);
-
-		$(window).on('resize', function () {
-		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-		})
-		$(window).on('resize', function () {
-		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-		})
-	</script>	
 </body>
 
 </html>

@@ -62,7 +62,8 @@ function secondLevelVis(comment) {
 
     var contextTree = d3.select("#context-tree")
         .append("svg")
-        .attr("width", details1Container.width() - margin.left - margin.right)
+        // .attr("width", details1Container.width() - margin.left - margin.right)
+        .attr("width", treeContainer.width() - margin.left - margin.right)
         .attr("height", detailsHeight - margin.top - margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");

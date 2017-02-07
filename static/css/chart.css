@@ -90,15 +90,20 @@ body > div.d3-tip.n {
 
 #details-2,
 #details-1 {
-    background: rgba(0, 0, 0, 0.8);
+    background: #fff;
+            /*rgba(0, 0, 0, 0.8);*/
     font-weight: lighter;
 }
 
+#body-1,
+#body-2 {
+    background: #fff;
+}
 #details-1 p {
     padding: 0px 25px 0px 25px;
     color: green;
 }
 #details-2 p {
     padding: 0px 25px 0px 25px;
-    color: yellow;
+    color: orange;
 }

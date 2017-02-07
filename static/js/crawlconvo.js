@@ -51,8 +51,6 @@ function readJSON(input) {
     var convo = data[1];
     walkGraph(convo);
 
-    // console.log(walkcounter);
-    // console.log(usercounter);
 }
 
 function walkGraph(entry) {
@@ -134,7 +132,7 @@ function showError() {
 
 function buildNetwork(parent) {
 
-    $("#first-level-vis").hide();
+    // $("#first-level-vis").hide();
     $("#second-level-vis").show();
 
     var req = "https://www.reddit.com" + parent['permalink'] +".json?jsonp=?";
@@ -155,13 +153,28 @@ function loadSecondLevel(d){
     }
     console.log(d);
     details1Container.empty();
-    details1Container.append($("<p>Author: " + d['author'] + "</p>"));
+    details1Container.append($("<p><span class='glyphicon glyphicon-user'></span> Author: " + d['author'] + "</p>"));
     details1Container.append($("<p>Score: " + d['score'] + "</p>"));
-    body1Container.html($("<p>" + d['body'] + "</p>"));
+    // body1Container.html($("<p>" + d['body'] + "</p>"));
+    var body1TeaserText;
+    var body1CompleteText;
+    if (d['body'].length > 120) {
+        body1TeaserText = d['body'].substring(0, 120);
+        body1CompleteText = d['body'].substring(120);
+        body1Container.html($("<span class='teaser'>" + body1TeaserText + "</span><span class='complete' style='display: none;'>" + body1CompleteText + "</span><span class='more btn btn-primary btn-xs' style='margin-left: 5px;'>more...</span>"));
+    } else {
+        body1Container.html($("<span class='teaser'>" + d['body'] + "</span>"));
+
+    }
+
+    // $(".more").on("click", function(){
+    //     $(this).text("").siblings(".complete").show();
+    // });
 
     treeContainer.empty();
     treeContainer.append(loading_gif);
 
+    names = {};
 
     $.ajax({
         dataType: "json",

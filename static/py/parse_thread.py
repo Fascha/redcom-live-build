@@ -2,7 +2,6 @@ from math import log
 
 
 def parse_comment(comment):
-
     try:
         data = {
             'id': comment.id,
@@ -19,10 +18,13 @@ def parse_comment(comment):
     return data
 
 def parse_submission_post(parent):
+    print(type(parent))
     try:
         child_id = parent.comments[0].id
     except:
         child_id = None
+
+
     data = {
         'id': parent.id,
         'author': str(parent.author),
@@ -35,13 +37,14 @@ def parse_submission_post(parent):
         'child_id': child_id
     }
 
+
     return data
 
 
 def parse_thread(thread):
     # replace all moreComments Objects
     # http://praw.readthedocs.io/en/praw4/pages/code_overview.html#praw.models.comment_forest.CommentForest.replace_more
-    thread.comments.replace_more(limit=0)
+    thread.comments.replace_more()
 
     comment_ids = []
     comments = {}

@@ -529,7 +529,7 @@ a.bg-danger:hover {
 
 .sidebar {
 	display: block;
-	background-color: #fff;
+	background-color: #e0e0f0;
 	padding: 0;
 	display: none;
 }
@@ -553,7 +553,7 @@ a.bg-danger:hover {
 		padding: 0;
 		overflow-x: hidden;
 		overflow-y: auto; 
-		background-color: #fff;
+		background-color: #e0e0f0;;
 		box-shadow: 1px 0px 10px rgba(0, 0, 0, .05);
 	}
 	.navbar-header {
@@ -611,8 +611,8 @@ a.bg-danger:hover {
 }
 
 .sidebar ul.nav li.divider {
-	border-bottom: 1px solid #eee;
-	margin: 20px 0;
+	border-bottom: 2px solid #eee;
+	margin: 5px 0;
 }
 
 .sidebar .attribution {
@@ -1003,3 +1003,50 @@ h1.page-header {
 #thread-title > div > h4 > a {
 	text-decoration: none;
 }
+
+#favorites {
+	font-size: 1.4em;
+	padding: 10px;
+	color: #fff;
+	background-color: #30a5ff;
+	text-align: center;
+}
+
+
+#example-threads > li > a {
+	color: #3c3c3c;
+
+}
+
+#example-threads {
+	background-color: snow;
+}
+
+.glyphicon-one-fine-blue-dot:before {
+	content:"\25cf";
+	font-size: 2em;
+	color: rgb(82, 82, 224);
+}
+
+.glyphicon-green-fine-green-dot:before {
+	content:"\25cf";
+	font-size: 2em;
+	color: rgb(83, 172, 83);
+}
+
+
+.btn-xlarge {
+	padding: 18px 28px;
+	font-size: 32px;
+	line-height: normal;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-bottom: 50px;
+}
+
+.second-level-details {
+	padding-top: 10px;
+	background-color: #9fadbb;
+}
+

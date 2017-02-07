@@ -27,9 +27,9 @@ r = set_account()
 def crawl_thread(id):
     #check if id(always len of 6 // base36 notation) or url
     print("Value: " + id)
-    if len(id) != 6:
+    # if len(id) != 6:
         # http://praw.readthedocs.io/en/praw4/pages/code_overview.html#praw.models.Submission.id_from_url
-        id = r.id_from_url(id)
+        # id = r.id_from_url(id)
     print("ID: " + id)
 
     thread = r.submission(id=id)
@@ -78,9 +78,20 @@ def crawl_comment(id):
 
 def get_first_level(submission):
     level = []
-    for comment in submission.comments:
-        level.append(parse_comment(comment))
 
+    # print("get first level type", type(submission))
+    # print(submission.id)
+    # comments = submission.comments.replace_more()
+    # for comment in comments:
+    #     print("for loop",type(comment))
+    #     level.append(parse_comment(comment))
+
+    comments = submission.comments.replace_more()
+
+    for comment in comments:
+        # level.append(parse_comment(comment))
+
+        level.append(comment)
     return level
 
 
@@ -120,16 +131,34 @@ def crawl_context(id):
         else:
             data['parent'] = parse_submission_post(parent)
             data['siblings'] = get_first_level(r.submission(id))
-        if 'parent_of_parent' in locals():
-            data['parent_of_parent'] = parse_comment(parent_of_parent)
-        else:
-            data['parent_of_parent'] = ""
+        # if 'parent_of_parent' in locals():
+        #     data['parent_of_parent'] = parse_comment(parent_of_parent)
+        # else:
+        #     data['parent_of_parent'] = ""
 
         data['children'] = get_level(comment, id)
 
         return data
     except:
-        raise KeyError("Can't crawl context of ORIGINAL POST")
+
+        comment = crawl_comment(id)
+
+        data['parent'] = ""
+        data['siblings'] = ""
+        # data['parent_of_parent'] = ""
+
+        children = []
+        submission = r.submission(id)
+        submission.comments.replace_more()
+        for com in submission.comments:
+            children.append(parse_comment(com))
+        data['children'] = children
+            # get_first_level(comment)
+
+        return data
+
+
+    #     raise KeyError("Can't crawl context of ORIGINAL POST")
 
 
 """
